@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AppLayout from './components/AppLayout';
 import Hero from './pages/HeroPage';
 import ChatPage from './pages/ChatPage';
@@ -9,7 +9,7 @@ import SettingsPage from './pages/SettingsPage';
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route element={<AppLayout />}>
           {/* Define nested routes here */}
@@ -22,7 +22,7 @@ const App = () => {
           {/* Add other routes here */}
         </Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 

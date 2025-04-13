@@ -1,11 +1,20 @@
 # FlatOrganizer
+
 ## Main App Section
--   Chat
--   Shopping List
--   Finances
--   Chores
--   Settings
+
+- Chat
+- Shopping List
+- Finances
+- Chores
+- Settings
+
 ## Install Library
+
 - npm install react-router-dom
 - npm install tailwindcss
-- npm i -D daisyui
+- npm install -D daisyui
+
+## Add Scaleability
+
+- Create GlobalContext
+- Create UseReducer Functionality
