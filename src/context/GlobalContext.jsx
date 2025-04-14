@@ -14,6 +14,11 @@ export const GlobalProvider = ({ children }) => {
   const removeItem = (index) =>
     dispatch({ type: 'REMOVE_ITEM', payload: index });
 
+  const addFlatmate = (flatmate) =>
+    dispatch({ type: 'ADD_FLATMATE', payload: flatmate });
+  const removeFlatmate = (id) =>
+    dispatch({ type: 'REMOVE_FLATMATE', payload: id });
+
   // Add other actions as needed
 
   return (
@@ -24,6 +29,8 @@ export const GlobalProvider = ({ children }) => {
         // Expose wrapped actions if you want convenience:
         addItem,
         removeItem,
+        addFlatmate,
+        removeFlatmate,
       }}
     >
       {children}

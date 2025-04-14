@@ -30,6 +30,9 @@ const Navbar = () => {
               <Link to="/finance">Finances</Link>
             </li>
             <li>
+              <Link to="/flatmates">Flatmates</Link>
+            </li>
+            <li>
               <Link to="/chat">Chat</Link>
             </li>
             <li>
@@ -51,6 +54,9 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">
           <li>
             <Link to="/finance">Finances</Link>
+          </li>
+          <li>
+            <Link to="/flatmates">Flatmates</Link>
           </li>
           <li>
             <Link to="/chat">Chat</Link>
