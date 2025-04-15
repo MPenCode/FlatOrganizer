@@ -6,6 +6,7 @@ import ChoresPage from './pages/ChoresPage';
 import FinancePage from './pages/FinancePage';
 import GroceriesPage from './pages/GroceriesPage';
 import SettingsPage from './pages/SettingsPage';
+import FlatmatesPage from './pages/FlatmatesPage';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/chat" element={<ChatPage />} />
           <Route path="/chores" element={<ChoresPage />} />
           <Route path="/finance" element={<FinancePage />} />
+          <Route path="/flatmates" element={<FlatmatesPage />} />
           <Route path="/groceries" element={<GroceriesPage />} />
           <Route path="/settings" element={<SettingsPage />} />
           {/* Add other routes here */}

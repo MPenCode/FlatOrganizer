@@ -35,5 +35,16 @@ export const reducer = (state, action) => {
 
     default:
       return state;
+    // 👥 Flatmates
+    case 'ADD_FLATMATE':
+      return {
+        ...state,
+        flatmates: [...state.flatmates, action.payload],
+      };
+    case 'REMOVE_FLATMATE':
+      return {
+        ...state,
+        flatmates: state.flatmates.filter((f) => f.id !== action.payload),
+      };
   }
 };
