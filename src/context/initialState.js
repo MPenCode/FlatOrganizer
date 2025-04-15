@@ -21,4 +21,15 @@ export const initialState = {
       assignedTo: [1, 2], // flatmate IDs
     },
   ],
+  financeEntries: [
+    // Example finance entry
+    {
+      id: 1,
+      title: 'Internet subscription',
+      amount: 60,
+      paidBy: 2, // flatmate ID
+      sharedWith: [1, 2, 3], // flatmate IDs
+      date: '2025-04-12',
+    },
+  ],
 };

@@ -40,6 +40,7 @@ export const reducer = (state, action) => {
       return {
         ...state,
         flatmates: state.flatmates.filter((f) => f.id !== action.payload),
+        // Chores
       };
     case 'ADD_CHORE':
       return {
@@ -64,6 +65,20 @@ export const reducer = (state, action) => {
                 nextDue: calculateNextDue(c.frequency),
               }
             : c
+        ),
+      };
+    // 🏠 Finance
+    case 'ADD_FINANCE_ENTRY':
+      return {
+        ...state,
+        financeEntries: [...state.financeEntries, action.payload],
+      };
+
+    case 'REMOVE_FINANCE_ENTRY':
+      return {
+        ...state,
+        financeEntries: state.financeEntries.filter(
+          (e) => e.id !== action.payload
         ),
       };
   }
