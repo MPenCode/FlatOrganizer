@@ -5,14 +5,15 @@
 - Chat
 - Shopping List
 - Finances
+- Flatmates
 - Chores
 - Settings
 
 ## Install Library
 
-- npm install react-router-dom
-- npm install tailwindcss
-- npm install -D daisyui
+- react-router-dom
+- tailwindcss
+- daisyui
 
 ## Add Scaleability
 
