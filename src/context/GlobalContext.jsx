@@ -18,6 +18,10 @@ export const GlobalProvider = ({ children }) => {
     dispatch({ type: 'ADD_FLATMATE', payload: flatmate });
   const removeFlatmate = (id) =>
     dispatch({ type: 'REMOVE_FLATMATE', payload: id });
+  const addChore = (chore) => dispatch({ type: 'ADD_CHORE', payload: chore });
+  const removeChore = (id) => dispatch({ type: 'REMOVE_CHORE', payload: id });
+  const markChoreDone = (id) =>
+    dispatch({ type: 'MARK_CHORE_DONE', payload: { id } });
 
   // Add other actions as needed
 
@@ -31,6 +35,9 @@ export const GlobalProvider = ({ children }) => {
         removeItem,
         addFlatmate,
         removeFlatmate,
+        addChore,
+        removeChore,
+        markChoreDone,
       }}
     >
       {children}

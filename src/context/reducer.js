@@ -1,3 +1,5 @@
+import { calculateNextDue } from '../utils/dateUtils';
+
 export const reducer = (state, action) => {
   switch (action.type) {
     // 🛒 Shopping List
@@ -19,13 +21,6 @@ export const reducer = (state, action) => {
         finances: [...state.finances, action.payload],
       };
 
-    // 🧹 Chores (example)
-    case 'ADD_CHORE':
-      return {
-        ...state,
-        chores: [...state.chores, action.payload],
-      };
-
     // 👤 User (example)
     case 'SET_USER':
       return {
@@ -45,6 +40,31 @@ export const reducer = (state, action) => {
       return {
         ...state,
         flatmates: state.flatmates.filter((f) => f.id !== action.payload),
+      };
+    case 'ADD_CHORE':
+      return {
+        ...state,
+        chores: [...state.chores, action.payload],
+      };
+
+    case 'REMOVE_CHORE':
+      return {
+        ...state,
+        chores: state.chores.filter((c) => c.id !== action.payload),
+      };
+
+    case 'MARK_CHORE_DONE':
+      return {
+        ...state,
+        chores: state.chores.map((c) =>
+          c.id === action.payload.id
+            ? {
+                ...c,
+                lastDone: new Date().toISOString(),
+                nextDue: calculateNextDue(c.frequency),
+              }
+            : c
+        ),
       };
   }
 };
