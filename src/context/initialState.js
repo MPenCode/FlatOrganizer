@@ -1,14 +1,10 @@
 export const initialState = {
   shoppingList: [],
-  finances: [],
-  chores: [],
   user: null,
   flatmates: [
-    { id: 1, name: 'You', points: 0 },
-    { id: 2, name: 'Flatmate 1', points: 0 },
-    { id: 3, name: 'Flatmate 2', points: 0 },
-    { id: 4, name: 'Flatmate 3', points: 0 },
-    //  add more fake users for testing
+    { id: '1', name: 'Alice' },
+    { id: '2', name: 'Bob' },
+    { id: '3', name: 'Charlie' },
   ],
   chores: [
     {
@@ -21,15 +17,5 @@ export const initialState = {
       assignedTo: [1, 2], // flatmate IDs
     },
   ],
-  financeEntries: [
-    // Example finance entry
-    {
-      id: 1,
-      title: 'Internet subscription',
-      amount: 60,
-      paidBy: 2, // flatmate ID
-      sharedWith: [1, 2, 3], // flatmate IDs
-      date: '2025-04-12',
-    },
-  ],
+  financeEntries: [],
 };

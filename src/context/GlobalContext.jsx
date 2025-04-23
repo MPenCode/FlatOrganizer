@@ -22,8 +22,8 @@ export const GlobalProvider = ({ children }) => {
   const removeChore = (id) => dispatch({ type: 'REMOVE_CHORE', payload: id });
   const markChoreDone = (id) =>
     dispatch({ type: 'MARK_CHORE_DONE', payload: { id } });
-  const addFinanceEntry = (entry) =>
-    dispatch({ type: 'ADD_FINANCE_ENTRY', payload: entry });
+  const addFinanceEntry = (financeEntries) =>
+    dispatch({ type: 'ADD_FINANCE_ENTRY', payload: financeEntries });
   const removeFinanceEntry = (id) =>
     dispatch({ type: 'REMOVE_FINANCE_ENTRY', payload: id });
 
